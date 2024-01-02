@@ -78,6 +78,14 @@ app.get("/employeedashboard",function(req,res){
     })
 })
 
+app.put("/resolvedticket/:id",function(req,res){
+    console.log(req.body)
+    Ticket.findByIdAndUpdate({_id:req.params.id},req.body)
+    .then(function(data){
+        res.send("Issue can be solved")
+    })
+})
+
 
 
 app.listen(process.env.PORT,function(){

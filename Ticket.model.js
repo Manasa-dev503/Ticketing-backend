@@ -7,7 +7,8 @@ var ticketSchema = mongoose.Schema({
     productname:String,
     id:Number,
     employeeId:String,
-    customerId:String
+    customerId:String,
+    status:String
 
 })
 
